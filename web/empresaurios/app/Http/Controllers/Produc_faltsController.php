@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Faltantes;
 class Produc_faltsController extends Controller
 {
     public function getTipFaltantes(){

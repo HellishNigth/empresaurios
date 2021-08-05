@@ -24,13 +24,13 @@
                 <div class="mb-3">
                     <label for="experiencia-rb" class="form-label">¿Tiene Experiencia?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="ex-rb" id="si-ex-rb">
+                        <input class="form-check-input" type="radio" name="ex-rb" value="si-ex-rb">
                         <label class="form-check-label" for="flexRadioDefault1">
                           Si
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="ex-rb" id="no-ex-rb" checked>
+                        <input class="form-check-input" type="radio" name="ex-rb" value="no-ex-rb" checked>
                         <label class="form-check-label" for="flexRadioDefault2">
                           No
                         </label>
@@ -45,6 +45,6 @@
 </div>
 @endsection
 @section("javascript")
-
+    <script src="{{asset('js/servicios/empleadosService.js')}}"></script>
     <script src="{{asset('js/agregar_empleado.js')}}"></script>
 @endsection

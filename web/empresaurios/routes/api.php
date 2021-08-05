@@ -34,4 +34,7 @@ Route::post("proveedores/delete", [ProveedoresController::class, "remove"]);
 
 //Empleados
 
+Route::get("tipempleados/get",[EmpleadosController::class, "getTipEmpleados"]);
 Route::get("empleados/get",[EmpleadosController::class, "getEmpleados"]);
+Route::post("empleados/post",[EmpleadosController::class, "crearEmpleado"]);
+Route::post("empleados/delete",[EmpleadosController::class, "cancelarEmpleado"]);
