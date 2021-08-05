@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\Produc_faltsController;
+use App\Http\Controllers\EmpleadosController;
 //use App\Http\Controllers\ProveedoresController;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
@@ -29,3 +30,8 @@ Route::post("faltantes/delete", [Produc_faltsController::class, "eliminarFaltant
 Route::get("proveedores/get", [ProveedoresController::class, "getFaltprod"]);
 Route::post("proveedores/post", [ProovedoresController::class, "save"]);
 Route::post("proveedores/delete", [ProveedoresController::class, "remove"]);
+
+
+//Empleados
+
+Route::get("empleados/get",[EmpleadosController::class, "getEmpleados"]);

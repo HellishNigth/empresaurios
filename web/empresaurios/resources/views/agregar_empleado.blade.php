@@ -19,9 +19,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="puestoempleado" class="form-label">Puesto del trabajador</label>
-                    <select class="form-select" id="puesto">
-                        
-                    </select>
+                    <select class="form-select" id="puesto"></select>
                 </div>
                 <div class="mb-3">
                     <label for="experiencia-rb" class="form-label">¿Tiene Experiencia?</label>
@@ -45,4 +43,8 @@
         </div>
     </div>
 </div>
+@endsection
+@section("javascript")
+
+    <script src="{{asset('js/agregar_empleado.js')}}"></script>
 @endsection
