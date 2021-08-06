@@ -22,15 +22,8 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="fragil-rb" class="form-label">Producto Fragil</label>
-                    <div class="form-check">
-                        <input type="radio" name="frag-rb" id ="frag-si-rb" checked class="form-check-input" value="si">
-                        <label for="frag-si-rb" class="form-check-input"></label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" name="frag-rb" id = "frag-no-rb" class="form-check-input" value="no">
-                        <label for="frag-no-rb" class="form-check-input"></label>
-                    </div>
+                    <label for="experiencia-select" class="form-label">¿Es fragil?</label>
+                    <select name="form-select" id="fragil"></select>
                 </div>
                 <div class="mb-3">
                     <label for="cantidad_provista-txt" class="form-label">Cantidad a proveer</label>
@@ -38,14 +31,13 @@
                 </div>
             </div>
             <div class="card-footer d-grid gap-1">
-                <button id="proveedor-btn" class="btn btn-primary">Registrar</button>
+                <button id="pro" class="btn btn-primary">Registrar</button>
             </div>
         </div>
     </div>
 </div>
 @endsection
 @section("javascript")
-    <script src="{{asset('js/servicios/faltantesService.js')}}"></script>
     <script src="{{asset('js/servicios/proveedoresService.js')}}"></script>
     <script src="{{asset('js/proveedores.js')}}"></script>
 @endsection

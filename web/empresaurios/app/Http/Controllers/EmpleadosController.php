@@ -7,16 +7,23 @@ use App\Models\Empleado;
 class EmpleadosController extends Controller
 {
     public function getTipEmpleados(){
-        $empleados = array();
-        $empleados[] = "Cajero(a)";
-        $empleados[] = "Conserje";
-        $empleados[] = "Reponedor(a)";
-        $empleados[] = "secretario(a)";
-        return $empleados;
+        $tipempleados = array();
+        $tipempleados[] = "Cajero(a)";
+        $tipempleados[] = "Conserje";
+        $tipempleados[] = "Reponedor(a)";
+        $tipempleados[] = "secretario(a)";
+        return $tipempleados;
+    }
+    public function getExEmpleados(){
+        $exempleados = array();
+        $exempleados[] = "Si";
+        $exempleados[] = "No";
+        
+        return $exempleados;
     }
     public function getEmpleados(){
-        $productos = Empleado::all();
-        return $productos;
+        $empleados = Empleado::all();
+        return $empleados;
     }
     public function crearEmpleado(Request $request){
         $input = $request->all();

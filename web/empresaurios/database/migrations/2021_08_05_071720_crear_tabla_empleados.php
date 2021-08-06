@@ -18,7 +18,7 @@ class CrearTablaEmpleados extends Migration
             $table->string("nameE",120);
             $table->string("rutE",9);
             $table->string("puestoE");
-            $table->tinyinteger("experiencia")->default(0);
+            $table->string("experiencia");
             $table->timestamps();
         });
     }

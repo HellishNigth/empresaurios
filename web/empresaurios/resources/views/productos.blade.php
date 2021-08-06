@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('contenido')
-    <div class="row mt-5">
-        <div class="col-12 col-md-6 col-lg-5 mx-auto">
+
+        <div class="col-12 col-md-6 col-lg-5 mx-auto mt-5">
             <div class="card">
                 <div class="card-header bg-danger text-dark">
                     <span>Agregar Producto</span>

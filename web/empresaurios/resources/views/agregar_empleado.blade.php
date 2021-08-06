@@ -14,31 +14,20 @@
                 </div>
                 <div class="mb-3">
                     <label for="rut" class="form-label">Rut del Empleado</label>
-                    <select class="form-control" id="rut">
-                    </select>
+                    <input type="text" id="rut" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="puestoempleado" class="form-label">Puesto del trabajador</label>
-                    <select class="form-select" id="puesto"></select>
+                    <select class="form-select" id="puesto">
+                    </select>
                 </div>
                 <div class="mb-3">
-                    <label for="experiencia-rb" class="form-label">¿Tiene Experiencia?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="ex-rb" value="si-ex-rb">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Si
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="ex-rb" value="no-ex-rb" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          No
-                        </label>
-                    </div>
+                    <label for="experiencia-select" class="form-label">¿Tiene Experiencia?</label>
+                    <select name="form-select" id="experiencia"></select>
                 </div>
             </div>
             <div class="card-footer d-grid gap-1">
-                <button class="btn btn-info" id="registrarfake-btn">Registrar</button>
+                <button id="esta" class="btn btn-info">Registrar</button>
             </div>
         </div>
     </div>

@@ -27,14 +27,16 @@ Route::post("faltantes/delete", [Produc_faltsController::class, "eliminarFaltant
 
 //Proveedores
 
-Route::get("proveedores/get", [ProveedoresController::class, "getFaltprod"]);
-Route::post("proveedores/post", [ProovedoresController::class, "save"]);
-Route::post("proveedores/delete", [ProveedoresController::class, "remove"]);
+Route::get("proveedores/get", [ProveedoresController::class, "getTipProveedor"]);
+Route::get("proveedores1/get", [ProveedoresController::class, "getFragil"]);
+Route::post("proveedores2/post", [ProovedoresController::class, "crearProveedor"]);
+Route::post("proveedores3/delete", [ProveedoresController::class, "cancelarProveedor"]);
 
 
 //Empleados
 
 Route::get("tipempleados/get",[EmpleadosController::class, "getTipEmpleados"]);
+Route::get("expempleados/get",[EmpleadosController::class, "getExEmpleados"]);
 Route::get("empleados/get",[EmpleadosController::class, "getEmpleados"]);
 Route::post("empleados/post",[EmpleadosController::class, "crearEmpleado"]);
 Route::post("empleados/delete",[EmpleadosController::class, "cancelarEmpleado"]);
