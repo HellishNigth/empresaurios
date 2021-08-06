@@ -2,7 +2,7 @@ const Erradicacion = async function(){
     let id = this.idEmpleado;
     let resp = await Swal.fire({title:"Esta de acuerdo?", text:"No se puede volver atras", icon:"error", showCancelButton:true});
     if(resp.isConfirmed){
-        if(cancelarProducto(id)){
+        if(cancelarEmpleado(id)){
             let empleados = await getEmpleados();
             cargarLista(empleados);
             Swal.fire("empleado eliminado",  "empleado erradicado","info");

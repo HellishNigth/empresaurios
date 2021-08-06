@@ -1,12 +1,11 @@
 const cargarFaltantes = async()=>{
-    let ras = await axios.get("api/tipfaltante/get");
-    let faltante = ras.data;
-
-    let faltantetSelect = document.querySelector("#faltante-select");
+    let resultado = await axios.get("api/tipfaltante/get");
+    let faltante = resultado.data;
+    let faltanteSelect = document.querySelector("#faltante-select");
     faltante.forEach(f=>{
         let option = document.createElement("option");
         option.innerText = f;
-        faltantetSelect.appendChild(option);
+        faltanteSelect.appendChild(option);
     });
 };
 document.addEventListener("DOMContentLoaded", ()=>{

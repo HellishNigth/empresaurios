@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-        <div class="col-12 col-md-6 col-lg-5 mx-auto mt-5">
+        <div class="col-12 col-md-6 col-lg-5 mx-auto mt-5 animate__animated animate__bounce">
             <div class="card">
                 <div class="card-header bg-danger text-dark">
                     <span>Agregar Producto</span>

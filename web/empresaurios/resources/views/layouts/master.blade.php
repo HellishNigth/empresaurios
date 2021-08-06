@@ -9,8 +9,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="{{asset("css/style.css")}}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        
         <title>Proyecto_Web</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     </head>
     <body class="bg-danger">
         <header>
@@ -37,44 +37,27 @@
                 </div>
                 </nav>
         </header>
-        <canvas id="graphics-box"></canvas>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js "></script>
-        <script>
-        function main() {
-            const canvas = document.querySelector("#graphics-box");
-            const renderer = new THREE.WebGLRenderer({ canvas });
-            const fov = 80;
-            const aspect = 2;
-            const near = 0.2;
-            const far = 4;
-            const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-            camera.position.z = 4;
-            const scene = new THREE.Scene();
-            const boxWidth = 2;
-            const boxHeight = 2;
-            const boxDepth = 4;
-            const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
-            const material = new THREE.MeshBasicMaterial({ color: 0x32aa72 });
-            const cube = new THREE.Mesh(geometry, material);
-            scene.add(cube);
-            function render(time) {
-            time *= 0.0002; // convert time to seconds
-            cube.rotation.x = time;
-            cube.rotation.y = time;
-            renderer.render(scene, camera);
-            requestAnimationFrame(render);
-            }
-            requestAnimationFrame(render);
-        }
-        main();
-        </script>
+<div id="pelota" style="background-color: rgb(0, 0, 0); height: 100px; width: 100px">
+    <script>
+    anime({
+        targets: ["#pelota", ".loop-alternate-infinity"],
+        translateX: 1200,
+        rotate: [1000, -1000],
+        borderRadius: 50,
+        duration: 3000,
+        easing: "easeInOutSine",
+        direction: "alternate",
+        loop: true,
+    });
+    </script>
+</div>
         <main class="container-fluid">
             @yield('contenido')
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         <script src="{{asset('js/axios_config.js')}}"></script>
         @yield("javascript")
     </body>

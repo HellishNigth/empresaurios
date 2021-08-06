@@ -1,7 +1,6 @@
 const iniciarKill = async function(){
     let id = this.idFaltante;
-    let resp = await Swal.fire({title:"Estas seguro?", text:"sus productos no estaran guardados"
-    ,icon:"error", showCancelButton:true});
+    let resp = await Swal.fire({title:"Estas seguro?", text:"sus productos no estaran guardados", icon:"error", showCancelButton:true});
     if(resp.isConfirmed){
         if(eliminarfaltante(id)){
             let faltantes = await getFaltantes();

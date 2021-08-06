@@ -28,10 +28,11 @@ class ProveedoresController extends Controller
     public function crearProveedor(Request $request){
         $input = $request->all();
         $proveedor = new Proveedor();
-        $proveedor->nameE = $input["nameE"];
-        $proveedor->rutE = $input["rutE"];
-        $proveedor->puestoE = $input["puestoE"];
-        $proveedor->experiencia = $input["experiencia"];
+        $proveedor->nomProv = $input["nomProv"];
+        $proveedor->prodProv = $input["prodProv"];
+        $proveedor->tipProv = $input["tipProv"];
+        $proveedor->fragil = $input["fragil"];
+        $proveedor->cantProv = $input["cantProv"];
         $proveedor->save();
         return $proveedor;
     }

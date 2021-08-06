@@ -4,8 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\Produc_faltsController;
+use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\EmpleadosController;
-//use App\Http\Controllers\ProveedoresController;
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -28,9 +29,9 @@ Route::post("faltantes/delete", [Produc_faltsController::class, "eliminarFaltant
 //Proveedores
 
 Route::get("proveedores/get", [ProveedoresController::class, "getTipProveedor"]);
-Route::get("proveedores1/get", [ProveedoresController::class, "getFragil"]);
-Route::post("proveedores2/post", [ProovedoresController::class, "crearProveedor"]);
-Route::post("proveedores3/delete", [ProveedoresController::class, "cancelarProveedor"]);
+Route::get("tipproveedores/get", [ProveedoresController::class, "getFragil"]);
+Route::post("proveedores/post", [ProveedoresController::class, "crearProveedor"]);
+Route::post("proveedores/delete", [ProveedoresController::class, "cancelarProveedor"]);
 
 
 //Empleados

@@ -1,10 +1,10 @@
 const getProveedores = async ()=>{
-    let resp = await axios.get("api/proveedores1/get");
+    let resp = await axios.get("api/proveedores/get");
     return resp.data;
 };
 
 const crearProveedor = async(proveedor)=>{
-    let resp = await axios.post("api/proveedores2/post", proveedor, {
+    let resp = await axios.post("api/proveedores/post", proveedor, {
         headers: {
             'Content-Type': 'application/json'
         }
@@ -14,7 +14,7 @@ const crearProveedor = async(proveedor)=>{
 
 const cancelarProveedor = async(id)=>{
     try{
-        let resp = await axios.post("api/proveedores3/delete", {id}, {
+        let resp = await axios.post("api/proveedores/delete", {id}, {
             headers:{
                 "Content-Type": "application/json"
             }

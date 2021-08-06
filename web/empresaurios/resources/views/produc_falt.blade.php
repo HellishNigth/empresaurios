@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('contenido')
-<div class="row mt-5">
+<div class="row mt-5 animate__animated animate__bounce">
     <div class="col-12 col-md-6 col-lg-5 mx-auto">
         <div class="card">
             <div class="card-header bg-danger text-dark">
